@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-source-lever-eu",
+  "description": "Gatsby source plugin for building websites using the Lever.co Recruitment Software as a data source - EU version.",
+  "version": "4.11.0-next.1",
+  "author": "Sebastien Fichot <fichot.sebastien@gmail.com>",
+  "bundledDependencies": [],
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "deep-map": "^1.5.0",
+    "deep-map-keys": "^1.2.0",
+    "json-stringify-safe": "^5.0.1",
+    "lodash": "^4.17.21"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "babel-preset-gatsby-package": "^2.11.0-next.0",
+    "cross-env": "^7.0.3"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^4.0.0-next"
+  },
+  "scripts": {
+    "build": "babel src --out-dir . --ignore \"**/__tests__\"",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore \"**/__tests__\""
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  }
+}
